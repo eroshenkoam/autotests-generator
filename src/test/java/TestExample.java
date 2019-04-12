@@ -14,7 +14,7 @@ import java.util.stream.IntStream;
 public class TestExample {
 
     static IntStream range() {
-        return IntStream.range(0, 200);
+        return IntStream.range(0, 700);
     }
 
     @ParameterizedTest
@@ -22,7 +22,7 @@ public class TestExample {
     public void testOutput() {
         try (InputStream stream = ClassLoader.getSystemResourceAsStream("attachment.html")) {
             final String content = IOUtils.toString(stream, Charset.forName("UTF-8"));
-            for (int i = 0; i < 50; i++) {
+            for (int i = 0; i < 250; i++) {
                 attachContent(content);
             }
         } catch (IOException e) {
